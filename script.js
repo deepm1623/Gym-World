@@ -64,11 +64,15 @@ window.addEventListener("load", () => {
 
   const open = () => {
     menu.classList.add("open");
+    openBtn.classList.add("is-open");
+    document.body.classList.add("menu-open");
     setA11y(true);
     document.body.style.overflow = "hidden";
   };
   const close = () => {
     menu.classList.remove("open");
+    openBtn.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
     setA11y(false);
     document.body.style.overflow = "";
   };
@@ -87,6 +91,11 @@ window.addEventListener("load", () => {
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
+  });
+
+  // Safety: close menu when resizing back to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 640 && menu.classList.contains("open")) close();
   });
 
   // init
@@ -126,6 +135,31 @@ window.addEventListener("load", () => {
   onScroll();
 
   btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+})();
+
+// Hide bottom fixed buttons near page bottom on small devices
+(() => {
+  const mobileCta = qs(".mobileCta");
+  const cornerActions = qs(".cornerActions");
+  const footer = qs("#footer");
+  if (!mobileCta || !cornerActions || !footer) return;
+
+  const isSmallDevice = () => window.innerWidth <= 640;
+  const setHidden = (hidden) => document.body.classList.toggle("hide-bottom-ui", hidden && isSmallDevice());
+
+  const obs = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0];
+      setHidden(Boolean(entry?.isIntersecting));
+    },
+    { threshold: 0.06 }
+  );
+
+  obs.observe(footer);
+
+  window.addEventListener("resize", () => {
+    if (!isSmallDevice()) setHidden(false);
+  });
 })();
 
 // Animated counters (triggered when hero stats visible)

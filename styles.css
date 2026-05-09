@@ -267,6 +267,15 @@ button{font:inherit}
   background: var(--blue-neon);
   transition: all 0.3s;
 }
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 /* Buttons */
 .btn-primary {
@@ -1160,14 +1169,6 @@ main section {
   letter-spacing: 1px;
 }
 
-/* Transformations */
-.transformGrid{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
-.transform{border-radius: var(--radius2); overflow:hidden}
-.transform__img{height: 240px; width:100%; object-fit:cover}
-.transform__body{padding: 14px 16px; display:flex; justify-content:space-between; gap:12px}
-.transform__name{font-weight:800; font-family:Montserrat, Poppins, sans-serif}
-.transform__meta{color:var(--muted)}
-
 /* Slider */
 .slider{background: var(--glass); border: 1px solid var(--glass-border); padding: 36px}
 .slider__viewport{overflow:hidden}
@@ -1783,7 +1784,7 @@ main section {
 .cornerActions {
   position: fixed;
   right: 16px;
-  bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1854,21 +1855,40 @@ main section {
 /* Mobile sticky CTA */
 .mobileCta{
   position:fixed; left: 50%; transform: translateX(-50%);
-  bottom: 14px;
+  bottom: calc(10px + env(safe-area-inset-bottom));
   width: min(560px, calc(100% - 24px));
   display:none;
   gap:10px;
-  padding: 10px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.40);
-  border: 1px solid rgba(255,255,255,.16);
+  padding: 8px;
+  border-radius: 18px;
+  background: rgba(2,10,20,.78);
+  border: 1px solid rgba(0,200,255,.32);
+  box-shadow: 0 0 20px rgba(0,200,255,.16), inset 0 0 20px rgba(0,200,255,.08);
   backdrop-filter: blur(12px);
   z-index: 65;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.mobileCta a{
+  flex:1;
+  justify-content:center;
+  min-height:40px;
+  border-width:1px;
+}
+
+/* Hide bottom fixed actions when near footer (mobile) */
+body.hide-bottom-ui .mobileCta,
+body.hide-bottom-ui .cornerActions,
+body.hide-bottom-ui .backToTop {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+body.hide-bottom-ui .mobileCta {
+  transform: translateX(-50%) translateY(18px);
 }
 
 /* Place back-to-top above corner actions */
 .backToTop {
-  bottom: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
   right: 80px;
 }
 
@@ -1897,7 +1917,7 @@ main section {
   position: fixed;
   inset: 0;
   background: rgba(2, 4, 8, 0.98);
-  z-index: 999;
+  z-index: 1200;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1905,17 +1925,20 @@ main section {
   gap: 22px;
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  overflow-y: auto;
+  padding: 90px 20px 40px;
 }
 .mobile-menu.open {
   transform: translateX(0);
 }
 .mobile-menu a {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 34px;
+  font-size: clamp(26px, 7vw, 34px);
   letter-spacing: 4px;
   color: var(--white);
   text-decoration: none;
   transition: color 0.3s;
+  text-align: center;
 }
 .mobile-menu a:hover {
   color: var(--blue-neon);
@@ -2035,6 +2058,14 @@ main section {
   }
   .mobileCta {
     display: flex;
+    width: calc(100% - 16px);
+    gap: 6px;
+    padding: 6px;
+  }
+  .mobileCta a {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    padding: 10px 8px;
   }
   .why-grid {
     grid-template-columns: 1fr;
@@ -2043,11 +2074,11 @@ main section {
     grid-template-columns: 1fr;
   }
   .cornerActions {
-    right: 12px;
-    bottom: 72px; /* keep above mobile sticky CTA */
+    right: 10px;
+    bottom: calc(88px + env(safe-area-inset-bottom));
   }
   .backToTop {
-    right: 12px;
-    bottom: 132px;
+    right: 74px;
+    bottom: calc(88px + env(safe-area-inset-bottom));
   }
 }

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="THE GYM WORLD AMRELI — Premium fitness club in Amreli, Gujarat. Strength, conditioning, transformation & coaching."
+    />
+    <title>THE GYM WORLD AMRELI — Elite Fitness</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader" aria-hidden="true">
+      <div class="loader__ring"></div>
+      <div class="loader__brand">
+        <span class="loader__title">THE GYM WORLD</span>
+        <span class="loader__sub">AMRELI</span>
+      </div>
+    </div>
+
+    <!-- Floating Actions (bottom-right) -->
+    <div class="cornerActions" aria-label="Quick contact actions">
+      <a
+        class="cornerBtn cornerBtn--whatsapp"
+        href="https://wa.me/919499866664?text=Hi%20THE%20GYM%20WORLD%20AMRELI%2C%20I%27d%20like%20to%20know%20about%20membership%20plans."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat on WhatsApp"
+        title="WhatsApp"
+      >
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path
+            fill="currentColor"
+            d="M19.11 17.79c-.25-.12-1.47-.73-1.7-.82-.23-.08-.4-.12-.56.12-.17.25-.64.82-.79.98-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.24-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.41-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.39 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.25 1.04.4 1.4.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.17-.48-.29z"
+          />
+          <path
+            fill="currentColor"
+            d="M16.02 5.33c-5.86 0-10.62 4.75-10.62 10.6 0 1.87.49 3.7 1.42 5.32L5.32 26.7l5.6-1.47c1.55.84 3.3 1.28 5.1 1.28 5.86 0 10.62-4.75 10.62-10.6S21.88 5.33 16.02 5.33zm0 19.36c-1.64 0-3.25-.44-4.67-1.27l-.33-.2-3.32.87.89-3.23-.22-.33c-.95-1.46-1.45-3.16-1.45-4.92 0-4.97 4.05-9.01 9.03-9.01 4.98 0 9.03 4.04 9.03 9.01 0 4.97-4.05 9.01-9.03 9.01z"
+          />
+        </svg>
+      </a>
+      <a class="cornerBtn cornerBtn--call" href="tel:+919499866664" aria-label="Call THE GYM WORLD AMRELI" title="Call">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            fill="currentColor"
+            d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"
+          />
+        </svg>
+      </a>
+    </div>
+    <button id="backToTop" class="backToTop" type="button" aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="mobileCta" role="region" aria-label="Quick actions">
+      <a class="btn-secondary btn-secondary--sm" href="#membership">Join Now</a>
+      <a class="btn-primary btn-primary--sm" href="#contact">Free Trial</a>
+      <a class="btn-secondary btn-secondary--sm" href="#contact">Contact</a>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <button class="mobile-close" id="mobileClose" type="button" aria-label="Close menu">✕</button>
+      <a href="#about">About</a>
+      <a href="#why">Why Us</a>
+      <a href="#services">Services</a>
+      <a href="#membership">Membership</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#bmi">BMI</a>
+      <a href="#transformations">Transformations</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+      <a href="#map">Map</a>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" aria-label="Primary navigation">
+      <a href="#hero" class="nav-logo" aria-label="THE GYM WORLD AMRELI home">
+        <img class="nav-logo-img" src="assets/Logo.png" alt="THE GYM WORLD AMRELI logo" loading="eager" decoding="async" />
+        <div class="nav-logo-text">
+          <span class="top">THE GYM WORLD</span>
+          <span class="bot">Amreli · Elite Fitness</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#bmi">BMI</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#membership" class="btn-nav">Join Now</a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <canvas id="heroParticles" class="heroParticles" aria-hidden="true"></canvas>
+
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-eyebrow">Amreli's Premier Fitness Destination</div>
+          <h1 class="hero-h1">
+            <span class="line1">THE</span>
+            <span class="line2">GYM WORLD</span>
+            <span class="line3">AMRELI</span>
+          </h1>
+          <p class="hero-tagline">
+            To create an enjoyable world of fitness driven by knowledge and technology that is constantly evolving.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#membership" class="btn-primary"><span>Join Now</span><span aria-hidden="true">→</span></a>
+            <a href="#contact" class="btn-secondary"><span>Free Trial</span></a>
+            <a href="#contact" class="btn-secondary"><span>Contact Us</span></a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num"><span class="counter" data-target="1200">0</span>+</div>
+              <div class="hero-stat-label">Active Members</div>
+            </div>
+            <div>
+              <div class="hero-stat-num"><span class="counter" data-target="12">0</span>+</div>
+              <div class="hero-stat-label">Expert Trainers</div>
+            </div>
+            <div>
+              <div class="hero-stat-num"><span class="counter" data-target="35">0</span>+</div>
+              <div class="hero-stat-label">Programs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-label="Logo display">
+          <div class="hero-logo-wrap">
+            <div class="hero-logo-ring"></div>
+            <div class="hero-logo-ring"></div>
+            <div class="hero-logo-ring"></div>
+            <div class="hero-logo-inner">
+              <img class="hero-logo-img" src="assets/Logo.png" alt="THE GYM WORLD AMRELI logo" />
+              <div class="hero-logo-caption">
+                THE GYM WORLD <span>AMRELI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#about" aria-label="Scroll to about section">
+        <span>Scroll</span>
+        <div class="scroll-line" aria-hidden="true"></div>
+      </a>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-label="Programs ticker">
+      <div class="ticker-inner">
+        <span class="ticker-item">Strength Training</span>
+        <span class="ticker-item">Cardio Fitness</span>
+        <span class="ticker-item">Expert Coaching</span>
+        <span class="ticker-item">Body Transformation</span>
+        <span class="ticker-item">Personal Training</span>
+        <span class="ticker-item">Nutrition Guidance</span>
+        <span class="ticker-item">Yoga & Wellness</span>
+        <span class="ticker-item">Weight Loss</span>
+        <span class="ticker-item">Strength Training</span>
+        <span class="ticker-item">Cardio Fitness</span>
+        <span class="ticker-item">Expert Coaching</span>
+        <span class="ticker-item">Body Transformation</span>
+        <span class="ticker-item">Personal Training</span>
+        <span class="ticker-item">Nutrition Guidance</span>
+        <span class="ticker-item">Yoga & Wellness</span>
+        <span class="ticker-item">Weight Loss</span>
+      </div>
+    </div>
+
+    <main>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="container grid2">
+          <div class="reveal">
+            <h2 class="section__title">About <span class="accent">THE GYM WORLD</span></h2>
+            <p class="section__lead">
+              A premium, dark-luxury fitness space built for performance, aesthetics, and measurable results.
+              We blend expert coaching, intelligent programming, and modern equipment—so every session moves you forward.
+            </p>
+            <div class="featureList">
+              <div class="feature glass">
+                <div class="feature__icon" aria-hidden="true">⚡</div>
+                <div>
+                  <div class="feature__title">Technology-driven training</div>
+                  <div class="feature__text">Structured plans, progressive overload, and smart recovery.</div>
+                </div>
+              </div>
+              <div class="feature glass">
+                <div class="feature__icon" aria-hidden="true">🧠</div>
+                <div>
+                  <div class="feature__title">Knowledge-first coaching</div>
+                  <div class="feature__text">Form, technique and coaching cues that keep you safe and strong.</div>
+                </div>
+              </div>
+              <div class="feature glass">
+                <div class="feature__icon" aria-hidden="true">💎</div>
+                <div>
+                  <div class="feature__title">Luxury atmosphere</div>
+                  <div class="feature__text">Neon-blue glow, premium lighting and a confident brand experience.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="aboutMedia reveal">
+            <img
+              class="aboutMedia__img"
+              src="Images/p1.jpg"
+              alt="Modern gym interior"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="aboutMedia__card glass">
+              <div class="aboutMedia__cardTitle">Premium Experience</div>
+              <div class="aboutMedia__cardText">Strength • Cardio • Functional • Coaching • Recovery</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section id="why">
+        <div class="container">
+          <div class="why-header reveal">
+            <div class="section-label">Why Choose Us</div>
+            <h2 class="section-title">The <span>Gym World</span> Difference</h2>
+            <p class="section-sub" style="margin: 14px auto 0; text-align: center">
+              Premium coaching, premium vibe, premium results—built in Amreli for world-class standards.
+            </p>
+          </div>
+
+          <div class="why-grid why-grid--compact">
+            <div class="why-card why-card--compact reveal">
+              <span class="why-icon">🏋️</span>
+              <h3>Equipment + Clean Floor</h3>
+              <p>Premium machines, free weights, and hygienic standards—built for serious training.</p>
+            </div>
+            <div class="why-card why-card--compact reveal reveal-delay-1">
+              <span class="why-icon">🧬</span>
+              <h3>Science-Based Coaching</h3>
+              <p>Progressive programming, form corrections, and recovery-first guidance.</p>
+            </div>
+            <div class="why-card why-card--compact reveal reveal-delay-2">
+              <span class="why-icon">📊</span>
+              <h3>Trackable Results</h3>
+              <p>Clear progress checkpoints so you stay motivated and keep improving.</p>
+            </div>
+            <div class="why-card why-card--compact reveal reveal-delay-3">
+              <span class="why-icon">🕐</span>
+              <h3>Flexible Timings</h3>
+              <p>Morning + evening sessions on most days—train when it fits your schedule.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="section__title">Services</h2>
+            <p class="section__sub">Everything you need for a world-class routine.</p>
+          </div>
+
+          <div class="serviceGrid">
+            <article class="service glass reveal">
+              <img class="service__img" src="Images/p2.jpg" alt="Strength training" loading="lazy" />
+              <div class="service__body">
+                <h3 class="service__title">Strength & Muscle</h3>
+                <p class="service__text">Progressive training for strength, hypertrophy, and confidence.</p>
+              </div>
+            </article>
+            <article class="service glass reveal">
+              <img class="service__img" src="Images/p3.jpg" alt="Functional training" loading="lazy" />
+              <div class="service__body">
+                <h3 class="service__title">Functional Training</h3>
+                <p class="service__text">Athletic movement patterns for real-life performance and injury prevention.</p>
+              </div>
+            </article>
+            <article class="service glass reveal">
+              <img class="service__img" src="Images/p4.jpg" alt="Cardio conditioning" loading="lazy" />
+              <div class="service__body">
+                <h3 class="service__title">Conditioning</h3>
+                <p class="service__text">Fat loss, stamina and heart health with intelligent cardio programming.</p>
+              </div>
+            </article>
+            <article class="service glass reveal">
+              <img class="service__img" src="Images/p5.jpg" alt="Personal training" loading="lazy" />
+              <div class="service__body">
+                <h3 class="service__title">Personal Training</h3>
+                <p class="service__text">One-on-one coaching for fast, safe progress.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEMBERSHIP -->
+      <section id="membership">
+        <div class="container">
+          <div class="membership-header reveal">
+            <div class="section-label">Membership Plans</div>
+            <h2 class="section-title">Invest In <span>Your Best</span><br />Self</h2>
+            <p class="section-sub" style="margin: 16px auto 0; text-align: center">
+              Flexible plans designed for every commitment level. Prices are placeholders—replace anytime.
+            </p>
+          </div>
+
+          <div class="plans-grid">
+            <div class="plan-card reveal">
+              <div class="plan-name">Starter</div>
+              <div class="plan-tagline">Perfect to begin your journey</div>
+              <div class="plan-price">
+                <span class="plan-currency">₹</span>
+                <span class="plan-amount">999</span>
+                <span class="plan-period">/month</span>
+              </div>
+              <ul class="plan-features">
+                <li>Gym Floor Access</li>
+                <li>Cardio Equipment</li>
+                <li>Locker Facility</li>
+                <li>Group Sessions (2/week)</li>
+                <li class="disabled">Personal Trainer</li>
+                <li class="disabled">Nutrition Consultation</li>
+              </ul>
+              <a href="#contact" class="plan-btn">Get Started</a>
+            </div>
+
+            <div class="plan-card featured reveal reveal-delay-1" aria-label="Most popular plan">
+              <div class="plan-badge">Most Popular</div>
+              <div class="plan-name">Pro Elite</div>
+              <div class="plan-tagline">For the serious athlete</div>
+              <div class="plan-price">
+                <span class="plan-currency">₹</span>
+                <span class="plan-amount">1799</span>
+                <span class="plan-period">/month</span>
+              </div>
+              <ul class="plan-features">
+                <li>Full Gym Access</li>
+                <li>All Equipment Included</li>
+                <li>Locker & Towel Service</li>
+                <li>Unlimited Group Classes</li>
+                <li>2× Personal Training Sessions</li>
+                <li>Nutrition Consultation</li>
+              </ul>
+              <a href="#contact" class="plan-btn">Join Now</a>
+            </div>
+
+            <div class="plan-card reveal reveal-delay-2">
+              <div class="plan-name">Champion</div>
+              <div class="plan-tagline">All-access transformation</div>
+              <div class="plan-price">
+                <span class="plan-currency">₹</span>
+                <span class="plan-amount">2799</span>
+                <span class="plan-period">/month</span>
+              </div>
+              <ul class="plan-features">
+                <li>Unlimited Full Access</li>
+                <li>All Equipment & Classes</li>
+                <li>Premium Locker Suite</li>
+                <li>Daily Personal Training</li>
+                <li>Full Nutrition Program</li>
+                <li>Body Composition Analysis</li>
+              </ul>
+              <a href="#contact" class="plan-btn">Go Champion</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trainers -->
+      <section id="trainers" class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="section__title">Meet Our <span class="accent">Trainers</span></h2>
+            <p class="section__sub">Professional guidance for every level.</p>
+          </div>
+
+          <div class="trainerGrid">
+            <article class="trainer glass reveal">
+              <img class="trainer__img" src="Images/p3.jpg" alt="Trainer portrait" loading="lazy" />
+              <div class="trainer__body">
+                <h3 class="trainer__name">Coach Aryan</h3>
+                <p class="trainer__role">Strength & Hypertrophy</p>
+              </div>
+            </article>
+            <article class="trainer glass reveal">
+              <img class="trainer__img" src="Images/p4.jpg" alt="Trainer portrait" loading="lazy" />
+              <div class="trainer__body">
+                <h3 class="trainer__name">Coach Meera</h3>
+                <p class="trainer__role">Fat Loss & Conditioning</p>
+              </div>
+            </article>
+            <article class="trainer glass reveal">
+              <img class="trainer__img" src="Images/p5.jpg" alt="Trainer portrait" loading="lazy" />
+              <div class="trainer__body">
+                <h3 class="trainer__name">Coach Kabir</h3>
+                <p class="trainer__role">Functional & Mobility</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BMI Calculator -->
+      <section id="bmi">
+        <div class="container">
+          <div class="bmi-wrap">
+            <div class="bmi-info reveal">
+              <div class="section-label">Health Tools</div>
+              <h2 class="section-title">Know Your <span>Numbers</span></h2>
+              <p class="section-sub">
+                Use our free BMI calculator to understand your current range and get personalized recommendations from our expert team.
+              </p>
+
+              <div class="bmi-ranges">
+                <div class="bmi-range">
+                  <div class="range-color" style="background: #00c8ff"></div>
+                  <div>
+                    <div class="range-label">Underweight</div>
+                    <div class="range-sub">Need to build lean mass</div>
+                  </div>
+                  <div class="range-value">BMI &lt; 18.5</div>
+                </div>
+                <div class="bmi-range">
+                  <div class="range-color" style="background: #00ff88"></div>
+                  <div>
+                    <div class="range-label">Normal Weight</div>
+                    <div class="range-sub">Ideal range — maintain it</div>
+                  </div>
+                  <div class="range-value">18.5 – 24.9</div>
+                </div>
+                <div class="bmi-range">
+                  <div class="range-color" style="background: #ffaa00"></div>
+                  <div>
+                    <div class="range-label">Overweight</div>
+                    <div class="range-sub">Focus on fat loss</div>
+                  </div>
+                  <div class="range-value">25 – 29.9</div>
+                </div>
+                <div class="bmi-range">
+                  <div class="range-color" style="background: #ff4444"></div>
+                  <div>
+                    <div class="range-label">Obese</div>
+                    <div class="range-sub">Guided transformation plan</div>
+                  </div>
+                  <div class="range-value">BMI ≥ 30</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bmi-form-card glass reveal">
+              <h3>Calculate Your BMI</h3>
+              <form id="bmiForm" autocomplete="off">
+                <div class="form-group">
+                  <label class="form-label" for="bmiAge">Age</label>
+                  <input type="number" class="form-input" id="bmiAge" placeholder="Enter your age" min="10" max="100" />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="bmiWeight">Weight (kg)</label>
+                    <input type="number" class="form-input" id="bmiWeight" placeholder="e.g. 70" min="30" max="300" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="bmiHeight">Height (cm)</label>
+                    <input type="number" class="form-input" id="bmiHeight" placeholder="e.g. 175" min="100" max="250" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="bmiGender">Gender</label>
+                  <select class="form-select" id="bmiGender">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+
+                <div class="bmi-actions">
+                  <button class="btn-full" type="submit">Calculate BMI →</button>
+                  <button class="btn-reset" id="bmiReset" type="button">Reset</button>
+                </div>
+
+                <div class="bmi-result-display" id="bmiResult" aria-live="polite">
+                  <div class="bmi-number" id="bmiValue">--</div>
+                  <div class="bmi-category" id="bmiCategory">--</div>
+                  <div class="bmi-message" id="bmiMsg">Enter your details above</div>
+                  <div class="bmi-scale-wrap">
+                    <div class="bmi-scale-bar">
+                      <div class="bmi-scale-pointer" id="bmiMarker"></div>
+                    </div>
+                    <div class="bmi-scale-labels">
+                      <span>Underweight</span><span>Normal</span><span>Overweight</span><span>Obese</span>
+                    </div>
+                  </div>
+                  <a href="#contact" class="btn-primary" style="display: inline-flex; margin-top: 18px; font-size: 12px; padding: 12px 24px">Get a Free Consultation →</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fitness Transformations -->
+      <section id="transformations" class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="section__title">Fitness <span class="accent">Transformations</span></h2>
+            <p class="section__sub">Real journeys. Real progress. (Cards use placeholders.)</p>
+          </div>
+          <div class="transformGrid">
+            <article class="transform glass reveal">
+              <img class="transform__img" src="Images/p1.jpg" alt="Fitness transformation" loading="lazy" />
+              <div class="transform__body">
+                <div class="transform__name">Rohan</div>
+                <div class="transform__meta">-12 kg • 16 weeks</div>
+              </div>
+            </article>
+            <article class="transform glass reveal">
+              <img class="transform__img" src="Images/p2.jpg" alt="Fitness transformation" loading="lazy" />
+              <div class="transform__body">
+                <div class="transform__name">Priya</div>
+                <div class="transform__meta">Strength + posture • 10 weeks</div>
+              </div>
+            </article>
+            <article class="transform glass reveal">
+              <img class="transform__img" src="Images/p3.jpg" alt="Fitness transformation" loading="lazy" />
+              <div class="transform__body">
+                <div class="transform__name">Aamir</div>
+                <div class="transform__meta">Lean bulk • 14 weeks</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials">
+        <div class="container">
+          <div class="test-header reveal">
+            <div class="section-label">Testimonials</div>
+            <h2 class="section-title">Our Members <span>Speak</span></h2>
+            <p class="section-sub" style="margin: 16px auto 0; text-align: center">
+              Premium experience, premium results—straight from members.
+            </p>
+          </div>
+
+          <div class="test-grid">
+            <div class="test-card reveal">
+              <div class="test-quote">"</div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-text">
+                The Gym World changed my routine completely. Trainers are supportive and the vibe is premium. I feel stronger and more confident every week.
+              </p>
+              <div class="test-author">
+                <div class="test-avatar">RS</div>
+                <div>
+                  <div class="test-name">Rajesh Solanki</div>
+                  <div class="test-role">Member</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="test-card reveal reveal-delay-1">
+              <div class="test-quote">"</div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-text">
+                Clean equipment, great lighting, and expert guidance. The programs are structured and actually track progress. Best gym in Amreli.
+              </p>
+              <div class="test-author">
+                <div class="test-avatar">AP</div>
+                <div>
+                  <div class="test-name">Ankita Patel</div>
+                  <div class="test-role">Member</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="test-card reveal reveal-delay-2">
+              <div class="test-quote">"</div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-text">
+                Early morning timings are perfect. Trainers correct form and keep you motivated. Results came faster than I expected.
+              </p>
+              <div class="test-author">
+                <div class="test-avatar">DJ</div>
+                <div>
+                  <div class="test-name">Dhruv Joshi</div>
+                  <div class="test-role">Member</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="section__title">Image <span class="accent">Gallery</span></h2>
+            <p class="section__sub">A glimpse of the vibe—premium, dark, neon, and powerful.</p>
+          </div>
+
+          <div class="gallery">
+            <button class="gallery__item reveal" data-full="Images/p1.jpg" type="button" aria-label="Open image 1">
+              <img src="Images/p1.jpg" alt="Gym equipment" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p2.jpg" type="button" aria-label="Open image 2">
+              <img src="Images/p2.jpg" alt="Training session" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p3.jpg" type="button" aria-label="Open image 3">
+              <img src="Images/p3.jpg" alt="Dumbbells" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p4.jpg" type="button" aria-label="Open image 4">
+              <img src="Images/p4.jpg" alt="Cardio machines" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p5.jpg" type="button" aria-label="Open image 5">
+              <img src="Images/p5.jpg" alt="Gym floor" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p6.jpg" type="button" aria-label="Open image 6">
+              <img src="Images/p6.jpg" alt="Training zone" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p7.jpg" type="button" aria-label="Open image 7">
+              <img src="Images/p7.jpg" alt="Gym moment" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p8.jpg" type="button" aria-label="Open image 8">
+              <img src="Images/p8.jpg" alt="Strength area" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p9.jpg" type="button" aria-label="Open image 9">
+              <img src="Images/p9.jpg" alt="Fitness training" loading="lazy" />
+            </button>
+            <button class="gallery__item reveal" data-full="Images/p10.jpg" type="button" aria-label="Open image 10">
+              <img src="Images/p10.jpg" alt="Gym equipment" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORKING HOURS -->
+      <section id="hours">
+        <div class="container">
+          <div class="hours-wrap">
+            <div class="reveal">
+              <div class="section-label">Working Hours</div>
+              <h2 class="section-title">Always<br /><span>Open For</span><br />You</h2>
+              <p class="section-sub">
+                We open early and stay late because your goals don't follow a 9-to-5. Train when it suits you.
+              </p>
+              <div class="open-badge">
+                <div class="open-dot" aria-hidden="true"></div>
+                <div class="open-text" id="openStatus">Checking hours...</div>
+              </div>
+              <div style="margin-top: 28px">
+                <a href="tel:+919499866664" class="btn-primary" style="display: inline-flex">📞 Call Us Now</a>
+              </div>
+            </div>
+
+            <div class="hours-card reveal reveal-delay-2">
+              <div class="hours-row" id="row-Mon">
+                <div class="hours-day"><div class="day-dot"></div>Monday</div>
+                <div class="hours-time">
+                  <span class="session">Morning</span>5:30 AM – 12:00 PM<br /><span class="session" style="margin-top: 4px">Evening</span>3:00
+                  PM – 10:00 PM
+                </div>
+              </div>
+              <div class="hours-row" id="row-Tue">
+                <div class="hours-day"><div class="day-dot"></div>Tuesday</div>
+                <div class="hours-time">
+                  <span class="session">Morning</span>5:30 AM – 12:00 PM<br /><span class="session" style="margin-top: 4px">Evening</span>3:00
+                  PM – 10:00 PM
+                </div>
+              </div>
+              <div class="hours-row" id="row-Wed">
+                <div class="hours-day"><div class="day-dot"></div>Wednesday</div>
+                <div class="hours-time">
+                  <span class="session">Morning</span>5:30 AM – 12:00 PM<br /><span class="session" style="margin-top: 4px">Evening</span>3:00
+                  PM – 10:00 PM
+                </div>
+              </div>
+              <div class="hours-row" id="row-Thu">
+                <div class="hours-day"><div class="day-dot"></div>Thursday</div>
+                <div class="hours-time">
+                  <span class="session">Morning</span>5:30 AM – 12:00 PM<br /><span class="session" style="margin-top: 4px">Evening</span>3:00
+                  PM – 10:00 PM
+                </div>
+              </div>
+              <div class="hours-row" id="row-Fri">
+                <div class="hours-day"><div class="day-dot"></div>Friday</div>
+                <div class="hours-time">
+                  <span class="session">Morning</span>5:30 AM – 12:00 PM<br /><span class="session" style="margin-top: 4px">Evening</span>3:00
+                  PM – 10:00 PM
+                </div>
+              </div>
+              <div class="hours-row" id="row-Sat">
+                <div class="hours-day"><div class="day-dot"></div>Saturday</div>
+                <div class="hours-time">
+                  <span class="session">Morning</span>5:30 AM – 12:00 PM<br /><span class="session" style="margin-top: 4px">Evening</span>3:00
+                  PM – 10:00 PM
+                </div>
+              </div>
+              <div class="hours-row" id="row-Sun">
+                <div class="hours-day"><div class="day-dot"></div>Sunday</div>
+                <div class="hours-time"><span class="session">Morning only</span>6:00 AM – 12:00 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT FORM -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="reveal">
+              <div class="section-label">Get In Touch</div>
+              <h2 class="section-title">Your <span>First Step</span><br />Starts Here</h2>
+              <p class="section-sub">
+                Ready to transform your body and life? Reach out for a free trial, tour, or to get started with any of our programs.
+              </p>
+
+              <div class="contact-items">
+                <div class="contact-item">
+                  <div class="contact-icon">📍</div>
+                  <div>
+                    <div class="contact-item-title">Location</div>
+                    <div class="contact-item-val">
+                      Located in: Shivam Plaza<br />
+                      G16 Shivam Plaza, GF, Jilla Panchayat Rd,<br />
+                      Amreli Irrigation Division, D.L.B. Society,<br />
+                      Amreli, Gujarat 365601
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">📞</div>
+                  <div>
+                    <div class="contact-item-title">Phone</div>
+                    <div class="contact-item-val">
+                      <a href="tel:+919499866664">+91 94998 66664</a><br />
+                      <a href="tel:+919499866665">+91 94998 66665</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">🕐</div>
+                  <div>
+                    <div class="contact-item-title">Working Hours</div>
+                    <div class="contact-item-val">Mon–Sat: 5:30 AM–12 PM & 3–10 PM<br />Sunday: 6 AM–12 PM</div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">💬</div>
+                  <div>
+                    <div class="contact-item-title">WhatsApp</div>
+                    <div class="contact-item-val">
+                      <a href="https://wa.me/919499866664" target="_blank" rel="noreferrer">Chat with us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-card reveal reveal-delay-2">
+              <h3>Free Trial / Consultation</h3>
+              <form id="contactForm" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="cName">Full Name</label>
+                  <input type="text" class="form-input" id="cName" name="name" placeholder="Your full name" required />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="cPhone">Phone</label>
+                    <input type="tel" class="form-input" id="cPhone" name="phone" placeholder="Mobile number" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="cAge">Age</label>
+                    <input type="number" class="form-input" id="cAge" name="age" placeholder="Your age" min="10" max="100" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cGoal">Goal</label>
+                  <select class="form-select" id="cGoal" name="goal">
+                    <option value="">Select your primary goal</option>
+                    <option>Weight Loss</option>
+                    <option>Muscle Gain / Bulking</option>
+                    <option>Overall Fitness</option>
+                    <option>Yoga & Wellness</option>
+                    <option>Sports Performance</option>
+                    <option>Rehabilitation</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cMessage">Message</label>
+                  <textarea class="form-textarea" id="cMessage" name="message" placeholder="Tell us your goal and preferred time..." required></textarea>
+                </div>
+                <button class="btn-full" type="submit">Book Free Trial →</button>
+                <div class="form-success" id="formSuccess">✓ Thank you! We'll contact you within 24 hours.</div>
+                <div id="formToast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GOOGLE MAP EMBED -->
+      <section id="map">
+        <div class="container">
+          <div class="map glass reveal">
+            <iframe
+              title="Google Map - THE GYM WORLD AMRELI"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=G16%20Shivam%20Plaza%2C%20Jilla%20Panchayat%20Rd%2C%20Amreli%2C%20Gujarat%20365601&output=embed"
+            ></iframe>
+            <div class="map__meta">
+              <div class="map__title">THE GYM WORLD AMRELI</div>
+              <div class="map__sub">Shivam Plaza, Amreli, Gujarat</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img class="footer-logo-img" src="assets/logo.jpg" alt="THE GYM WORLD AMRELI logo" loading="lazy" decoding="async" />
+              <div class="footer-logo-text">
+                <div class="top">THE GYM WORLD</div>
+                <div class="bot">Amreli · Elite Fitness</div>
+              </div>
+            </div>
+            <p class="footer-desc">
+              To create an enjoyable world of fitness driven by knowledge and technology that is constantly evolving.
+              Located in Amreli, Gujarat.
+            </p>
+            <div class="footer-socials">
+              <a href="#" class="social-btn" title="Instagram">📸</a>
+              <a href="#" class="social-btn" title="Facebook">👥</a>
+              <a href="https://wa.me/919499866664" class="social-btn" title="WhatsApp" target="_blank" rel="noreferrer">💬</a>
+              <a href="tel:+919499866664" class="social-btn" title="Call">📞</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#membership">Membership</a></li>
+              <li><a href="#trainers">Our Trainers</a></li>
+              <li><a href="#bmi">BMI Calculator</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Programs</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Strength Training</a></li>
+              <li><a href="#services">Cardio Fitness</a></li>
+              <li><a href="#services">Yoga Classes</a></li>
+              <li><a href="#services">Personal Training</a></li>
+              <li><a href="#services">Weight Management</a></li>
+              <li><a href="#services">Functional Fitness</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <div class="footer-contact-item">
+              <span class="icon">📍</span>
+              <span class="val">G16 Shivam Plaza, GF, Jilla Panchayat Rd, Amreli, Gujarat 365601</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon">📞</span>
+              <span class="val"
+                ><a href="tel:+919499866664" style="color: var(--white-dim); text-decoration: none">+91 94998 66664</a><br /><a
+                  href="tel:+919499866665"
+                  style="color: var(--white-dim); text-decoration: none"
+                  >+91 94998 66665</a
+                ></span
+              >
+            </div>
+            <div class="footer-contact-item">
+              <span class="icon">🕐</span>
+              <span class="val">Mon–Sat: 5:30 AM–12 PM & 3:00 PM–10:00 PM<br />Sun: 6 AM–12 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="glow-line"></div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> The Gym World Amreli. All rights reserved. Shivam Plaza, Amreli, Gujarat.</p>
+          <div class="footer-credits">BUILT FOR CHAMPIONS · AMRELI'S ELITE FITNESS</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Gallery Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button id="lightboxClose" class="lightbox__close" type="button" aria-label="Close image">×</button>
+      <img id="lightboxImg" class="lightbox__img" alt="Expanded gallery view" />
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

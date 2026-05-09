@@ -1940,6 +1940,39 @@ body.hide-bottom-ui .mobileCta {
   transition: color 0.3s;
   text-align: center;
 }
+.mobile-menu-brand {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.mobile-menu-brand img {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(0, 200, 255, 0.32));
+}
+.mobile-menu-brand-text {
+  text-align: center;
+  line-height: 1;
+}
+.mobile-menu-brand-text .top {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+.mobile-menu-brand-text .bot {
+  display: block;
+  margin-top: 4px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--blue-neon);
+  font-weight: 700;
+}
 .mobile-menu a:hover {
   color: var(--blue-neon);
 }
@@ -2066,6 +2099,14 @@ body.hide-bottom-ui .mobileCta {
     font-size: 10px;
     letter-spacing: 1.4px;
     padding: 10px 8px;
+  }
+  .mobile-menu {
+    justify-content: flex-start;
+    padding-top: 84px;
+    gap: 16px;
+  }
+  .mobile-menu-brand {
+    display: flex;
   }
   .why-grid {
     grid-template-columns: 1fr;
